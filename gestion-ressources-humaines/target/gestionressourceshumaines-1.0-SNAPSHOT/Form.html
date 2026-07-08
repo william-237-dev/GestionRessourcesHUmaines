@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axitech | inscription d'une personne</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="https://picsum.photos/30/24" alt="Logo Axitech" width="30" height="24" class="me-2 rounded">
+                <strong>Axitech</strong>
+            </a>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                
+                <div class="card shadow-sm border-0 px-4 py-4">
+                    <div class="card-body">
+                        <h2 class="card-title h4 mb-4 text-center text-secondary">Formulaire d'inscription</h2>
+                        
+                        <form action="/gestion-ressources-humaines/personne" method="post">
+                            <div class="row mb-3">
+                                <div class="col-12 col-sm-6 mb-3 mb-sm-0">
+                                    <label for="nomInput" class="form-label font-monospace small text-uppercase text-muted">Nom</label>
+                                    <input type="text" name="nom" class="form-control" id="nomInput" placeholder="Dupont" required>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="prenomInput" class="form-label font-monospace small text-uppercase text-muted">Prénom</label>
+                                    <input type="text" name="prenom" class="form-control" id="prenomInput" placeholder="Jean" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="emailInput" class="form-label font-monospace small text-uppercase text-muted">Adresse Email</label>
+                                <input type="email" name="email" class="form-control" id="emailInput" placeholder="nom@exemple.com" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="passwordInput" class="form-label font-monospace small text-uppercase text-muted">Mot de passe</label>
+                                <input type="password" id="passwordInput" name="motDePasse" class="form-control" aria-describedby="passwordHelpBlock" required>
+                                <div id="passwordHelpBlock" class="form-text mt-2 small text-muted">
+                                    Votre mot de passe doit contenir entre 8 et 20 caractères, inclure des lettres et des chiffres, sans espaces ni caractères spéciaux.
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="messageTextarea" class="form-label font-monospace small text-uppercase text-muted">Commentaires / Notes</label>
+                                <textarea class="form-control" id="messageTextarea" name="commentaire" rows="3" placeholder="Votre message ici..."></textarea>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-block py-2">Valider le formulaire</button>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

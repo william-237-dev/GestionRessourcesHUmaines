@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class Database {
-    private String url = "jdbc:mysql://172.17.0.2:3306/gestion_des_r_h";
+    private String url = "jdbc:mysql://172.17.0.3:3306/gestion_des_r_h";
     private String username = "root";
     private String password = "Q1W2E3R4T5Y6";
 

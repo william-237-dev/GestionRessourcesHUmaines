@@ -4,32 +4,38 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Comptable extends Personne {
-    private String adresse;
-    private List<BulletinPaie> BulletinPaie;
-    
+
+    private List<BulletinPaie> bulletinsPaie;
+
     public Comptable() {
     }
 
     public Comptable(int id, String nom, String prenom, String adresse) {
         super(id, nom, prenom, adresse);
-        this.adresse = adresse;
-        this.BulletinPaie = new ArrayList<>();
+        this.bulletinsPaie = new ArrayList<>();
     }
 
     public void ajouterBulletinPaie(BulletinPaie bulletinPaie) {
-            this.BulletinPaie.add(bulletinPaie);
+        this.bulletinsPaie.add(bulletinPaie);
     }
 
-    public String getAdresse() {
-        return adresse;
+    // --- Methode metier du diagramme de cas d'utilisation ---
+
+    public BulletinPaie editerBulletinPaie(Employe employe) {
+        List<Employe> employesConcernes = new ArrayList<>();
+        employesConcernes.add(employe);
+
+        BulletinPaie bulletin = new BulletinPaie(0, employesConcernes);
+        this.bulletinsPaie.add(bulletin);
+        System.out.println("Bulletin de paie edite pour " + employe.getPrenom() + " " + employe.getNom());
+        return bulletin;
     }
 
-    public void setAdresse(String adresse) {
-        this.adresse = adresse;
+    public List<BulletinPaie> getBulletinsPaie() {
+        return bulletinsPaie;
     }
 
-    public List<BulletinPaie> getBulletinPaie() {
-        return BulletinPaie;
+    public void setBulletinsPaie(List<BulletinPaie> bulletinsPaie) {
+        this.bulletinsPaie = bulletinsPaie;
     }
-    
 }

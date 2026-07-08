@@ -5,7 +5,8 @@ import java.util.List;
 public class BulletinPaie {
     private int id;
     private List<Employe> employes;
-    
+    private Integer comptableId;
+
     public BulletinPaie() {
     }
 
@@ -30,16 +31,11 @@ public class BulletinPaie {
         this.employes = employes;
     }
 
-    public String getNom_employe() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getNom_employe'");
+    public Integer getComptableId() {
+        return comptableId;
     }
 
-    public void setNom_employe(String nom4) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setNom_employe'");
+    public void setComptableId(Integer comptableId) {
+        this.comptableId = comptableId;
     }
-
-    
-
 }

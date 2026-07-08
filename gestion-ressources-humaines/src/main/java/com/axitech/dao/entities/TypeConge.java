@@ -1,23 +1,22 @@
 package com.axitech.dao.entities;
 
-import java.util.List;
-
 public class TypeConge {
     private int id;
     private String type;
     private int nombre_jours;
     private String description;
-    private List<Employe> employes;
-   
+    private String statut; // "En attente", "Accepte", "Refuse"
+
     public TypeConge() {
+        this.statut = "En attente";
     }
 
-    public TypeConge(int id, String type, int nombre_jours, String description, List<Employe> employes) {
+    public TypeConge(int id, String type, int nombre_jours, String description) {
         this.id = id;
         this.type = type;
         this.nombre_jours = nombre_jours;
         this.description = description;
-        this.employes = employes;
+        this.statut = "En attente";
     }
 
     public int getId() {
@@ -52,13 +51,11 @@ public class TypeConge {
         this.description = description;
     }
 
-    public List<Employe> getEmployes() {
-        return employes;
+    public String getStatut() {
+        return statut;
     }
 
-    public void setEmployes(List<Employe> employes) {
-        this.employes = employes;
+    public void setStatut(String statut) {
+        this.statut = statut;
     }
-
-    
 }

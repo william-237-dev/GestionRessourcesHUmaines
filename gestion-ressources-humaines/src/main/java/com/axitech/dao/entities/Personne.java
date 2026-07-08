@@ -5,7 +5,7 @@ public class Personne {
     protected String nom;
     protected String prenom;
     private String adresse;
-    
+
     public Personne() {
     }
 
@@ -47,7 +47,4 @@ public class Personne {
     public void setAdresse(String adresse) {
         this.adresse = adresse;
     }
-
-    
-    
 }

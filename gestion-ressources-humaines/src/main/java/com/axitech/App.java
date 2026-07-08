@@ -13,7 +13,6 @@ import com.axitech.dao.entities.Pdg;
 import com.axitech.dao.entities.Personne;
 import com.axitech.dao.entities.Tache;
 import com.axitech.dao.entities.TypeConge;
-import com.axitech.dao.repository.BulletinPaieRepository;
 import com.axitech.dao.repository.ComptableRepository;
 import com.axitech.dao.repository.ContratRepository;
 import com.axitech.dao.repository.DrhRepository;
@@ -38,7 +37,6 @@ public class App {
     private static PdgRepository pdgRepository;
     private static DrhRepository drhRepository;
     private static ComptableRepository comptableRepository;
-    private static BulletinPaieRepository bulletinPaieRepository;
     private static ContratRepository contratRepository;
     private static FormationRepository formationRepository;
     private static MissionRepository missionRepository;
@@ -57,7 +55,6 @@ public class App {
     PdgRepository pdgRepository = new PdgRepository(connection);
     DrhRepository drhRepository = new DrhRepository(connection);
     ComptableRepository comptableRepository = new ComptableRepository(connection);
-    BulletinPaieRepository bulletinPaieRepository = new BulletinPaieRepository(connection);
     ContratRepository contratRepository = new ContratRepository(connection);
     FormationRepository formationRepository = new FormationRepository(connection);
     MissionRepository missionRepository = new MissionRepository(connection);
@@ -80,7 +77,7 @@ public class App {
         Tache tache = new Tache();
         TypeConge typeConge = new TypeConge();
 
-/** 
+
 
       // CODE POUR INSERER UNE PERSONNE et afficher la liste des PERSONNES
 
@@ -110,7 +107,7 @@ public class App {
 
         
 
-      
+  /**    
     
         // CODE POUR INSERER UN EMPLOYE et afficher la liste des EMPLOYES
         

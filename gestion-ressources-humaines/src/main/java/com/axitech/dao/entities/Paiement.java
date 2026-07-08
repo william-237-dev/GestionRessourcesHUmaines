@@ -8,6 +8,7 @@ public class Paiement {
     private double montant;
     private String datePaiement;
     private List<Employe> employes;
+    private Integer drhId;
 
     public Paiement() {
     }
@@ -60,8 +61,11 @@ public class Paiement {
         this.employes = employes;
     }
 
-    
+    public Integer getDrhId() {
+        return drhId;
+    }
 
-   
-    
+    public void setDrhId(Integer drhId) {
+        this.drhId = drhId;
+    }
 }

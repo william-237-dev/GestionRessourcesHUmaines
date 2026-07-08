@@ -6,7 +6,8 @@ public class Mission {
     private int id;
     private String description;
     private Date date;
-    
+    private Integer drhId;
+
     public Mission() {
     }
 
@@ -39,7 +40,12 @@ public class Mission {
     public void setDate(Date date) {
         this.date = date;
     }
-    
-    
-    
+
+    public Integer getDrhId() {
+        return drhId;
+    }
+
+    public void setDrhId(Integer drhId) {
+        this.drhId = drhId;
+    }
 }

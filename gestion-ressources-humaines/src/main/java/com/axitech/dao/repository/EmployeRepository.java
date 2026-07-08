@@ -152,5 +152,26 @@ public class EmployeRepository {
              System.out.println("Error listing employers: " + e.getMessage());
             e.printStackTrace();
         }
+    }
+
+
+
+	public void attribuerTache(int id, Tache tache) {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'attribuerTache'");
+	}
+
+
+
+    public void demanderConge(int id, int congeId) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'demanderConge'");
+    }
+
+
+
+    public Employe findById(int id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'findById'");
     }    
 }

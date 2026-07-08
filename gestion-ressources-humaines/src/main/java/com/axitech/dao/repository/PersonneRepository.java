@@ -1,12 +1,16 @@
 package com.axitech.dao.repository;
 
 import java.sql.Connection;
+
+import com.axitech.dao.entities.Comptable;
+import com.axitech.dao.entities.Pdg;
 import com.axitech.dao.entities.Personne;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 
 public class PersonneRepository {
     private Connection connection;
@@ -44,13 +48,14 @@ public class PersonneRepository {
     }
 
 
-    public void setPersonne(Personne personne) {
+    public int setPersonne(Personne personne) {
         this.personne = personne;
+        return 0;
     }
 
 
     public void  save(Personne personne2) {
-        String sql = "INSERT INTO Personne (nom, prenom, adresse) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO personne (nom, prenom, adresse) VALUES (?, ?, ?)";
         try {
             PreparedStatement pstatement = connection.prepareStatement(sql);
             pstatement.setString(1, personne2.getNom());
@@ -66,7 +71,7 @@ public class PersonneRepository {
     }
 
     public void listemployer(){
-        String sql = "SELECT * FROM Personne";
+        String sql = "SELECT * FROM personne";
         try {
             Statement stmt =connection.createStatement();
            ResultSet rs= stmt.executeQuery(sql);
@@ -83,6 +88,18 @@ public class PersonneRepository {
             System.out.println("Error listing employers: " + e.getMessage());
             e.printStackTrace();
         }
+    }
+
+
+    public int insererPersonne(Personne pdg, String string) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'insererPersonne'");
+    }
+
+
+    public static List<Personne> findAll() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'findAll'");
     }
 
 } 
