@@ -1,11 +1,11 @@
+com/axitech/controller/ListePersonnesServlet.class
+com/axitech/controller/ThymeleafConfig.class
 com/axitech/dao/repository/FormationRepository.class
 com/axitech/controller/Personnecontroller.class
 com/axitech/dao/repository/ContratRepository.class
 com/axitech/dao/entities/Pdg.class
-com/axitech/controller/Personnecontroller$PersonneDAO.class
 com/axitech/dao/repository/TypeCongeRepository.class
 com/axitech/dao/entities/Contrat.class
-com/axitech/controller/Personnecontroller$PersonneRepositoty.class
 com/axitech/dao/entities/Formation.class
 com/axitech/dao/entities/Paiement.class
 com/axitech/dao/repository/ComptableRepository.class
@@ -21,6 +21,7 @@ com/axitech/dao/repository/EmployeRepository.class
 com/axitech/dao/entities/Personne.class
 com/axitech/dao/entities/Comptable.class
 com/axitech/dao/entities/Employe.class
+com/axitech/service/Personneservice.class
 com/axitech/dao/repository/DrhRepository.class
 com/axitech/dao/repository/PdgRepository.class
 com/axitech/App.class

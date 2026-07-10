@@ -21,17 +21,17 @@ public class DrhRepository {
 
     public DrhRepository(Connection connection) {
         this.connection = connection;
-        this.personneRepository = new PersonneRepository(connection);
+        
     }
 
     public void save(Drh drh) {
-        // insererPersonne expects a Personne; Drh extends Personne so cast explicitly
-        int id = personneRepository.setPersonne((com.axitech.dao.entities.Personne) drh);
-        if (id == -1) {
+        // insererPersonne expects a Personne and a type; Drh extends Personne so cast explicitly
+        personneRepository.insererPersonne((com.axitech.dao.entities.Personne) drh, "DRH");
+        int id = drh.getId();
+        if (id <= 0) {
             System.out.println("Echec de l'insertion de la personne, DRH non cree.");
             return;
         }
-        drh.setId(id);
 
         String sql = "INSERT INTO drh (id) VALUES (?)";
         try {

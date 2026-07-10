@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestion des personnes</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            min-height: 100vh;
+            padding: 40px;
+        }
+
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+
+        .header h1 {
+            color: #1f2937;
+            font-size: 28px;
+        }
+
+
+        .btn {
+            text-decoration: none;
+            background: #2563eb;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+
+        thead {
+            background: #2563eb;
+            color: white;
+        }
+
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-size: 15px;
+        }
+
+
+        td {
+            padding: 14px;
+            border-bottom: 1px solid #e5e7eb;
+            color: #374151;
+        }
+
+
+        tbody tr:hover {
+            background: #f1f5ff;
+        }
+
+
+        .badge {
+            background: #dcfce7;
+            color: #166534;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+
+
+        .edit {
+            background: #f59e0b;
+            color: white;
+            padding: 7px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+
+        .delete {
+            background: #dc2626;
+            color: white;
+            padding: 7px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+
+        .footer {
+            margin-top: 25px;
+            color: #6b7280;
+            text-align: center;
+            font-size: 14px;
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <div class="header">
+
+        <h1>
+            👥 Liste des personnes
+        </h1>
+
+
+        <a href="/gestionressourceshumaines/personne" class="btn">
+            + Ajouter une personne
+        </a>
+
+    </div>
+
+
+
+    <table>
+
+
+        <thead>
+
+            <tr>
+                <th>ID</th>
+                <th>NOM</th>
+                <th>PRÉNOM</th>
+                <th>ADRESSE</th>
+                <th>STATUT</th>
+                <th>ACTIONS</th>
+            </tr>
+
+        </thead>
+
+
+
+        <tbody>
+
+
+            <tr th:each="personne : ${listpersonne}">
+
+
+                <td th:text="${personne.id}">
+                    1
+                </td>
+
+
+                <td th:text="${personne.nom}">
+                    Nom
+                </td>
+
+
+                <td th:text="${personne.prenom}">
+                    Prenom
+                </td>
+
+
+                <td th:text="${personne.adresse}">
+                    Adresse
+                </td>
+
+
+                <td>
+                    <span class="badge">
+                        Actif
+                    </span>
+                </td>
+
+
+                <td>
+
+                    <div class="actions">
+
+                        <a href="#" class="edit">
+                            Modifier
+                        </a>
+
+
+                        <a href="#" class="delete">
+                            Supprimer
+                        </a>
+
+                    </div>
+
+                </td>
+
+
+            </tr>
+
+
+        </tbody>
+
+
+    </table>
+
+
+
+    <div class="footer">
+
+        Gestion Ressources Humaines © 2026
+
+    </div>
+
+
+
+</div>
+
+
+
+</body>
+
+</html>

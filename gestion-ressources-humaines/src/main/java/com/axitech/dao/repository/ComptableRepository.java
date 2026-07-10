@@ -14,16 +14,17 @@ public class ComptableRepository {
 
     public ComptableRepository(Connection connection) {
         this.connection = connection;
-        this.personneRepository = new PersonneRepository(connection);
     }
 
     public void save(Comptable comptable) {
-        int id = personneRepository.insererPersonne(comptable, "COMPTABLE");
-        if (id == -1) {
+        // insererPersonne is expected to set the id on the comptable instance.
+        // Call it and then retrieve the id from the object to avoid type mismatch.
+        personneRepository.insererPersonne(comptable, "COMPTABLE");
+        int id = comptable.getId();
+        if (id == -1 || id == 0) {
             System.out.println("Echec de l'insertion de la personne, Comptable non cree.");
             return;
         }
-        comptable.setId(id);
 
         String sql = "INSERT INTO comptable (id) VALUES (?)";
         try {

@@ -50,7 +50,7 @@ public class App {
 
 
     
-    PersonneRepository personneRepository = new PersonneRepository(connection);
+    PersonneRepository personneRepository = new PersonneRepository();
     EmployeRepository employeRepository = new EmployeRepository(connection);
     PdgRepository pdgRepository = new PdgRepository(connection);
     DrhRepository drhRepository = new DrhRepository(connection);
@@ -102,8 +102,8 @@ public class App {
 
 
 
-         System.out.println("Liste des employes :");
-        personneRepository.listemployer();  
+        System.out.println("Liste des employes :");
+        employeRepository.listemployer();  
 
         
 

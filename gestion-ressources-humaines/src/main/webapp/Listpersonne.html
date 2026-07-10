@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des personnes</title>
+</head>
+<body>
+    <h1>Liste des personnes</h1>
+    <table border="1" cellpadding="8" id="tablePersonnes">
+        <tr><th>Id</th><th>Nom</th><th>Prenom</th><th>Adresse</th></tr>
+    </table>
+    <br>
+    <a href="personne">Ajouter une autre personne</a>
+
+    <script>
+        fetch("personnes-json")
+            .then(response => response.json())
+            .then(personnes => {
+                const table = document.getElementById("tablePersonnes");
+                personnes.forEach(p => {
+                    const row = table.insertRow();
+                    row.insertCell(0).textContent = p.id;
+                    row.insertCell(1).textContent = p.nom;
+                    row.insertCell(2).textContent = p.prenom;
+                    row.insertCell(3).textContent = p.adresse;
+                });
+            });
+    </script>
+</body>
+</html>

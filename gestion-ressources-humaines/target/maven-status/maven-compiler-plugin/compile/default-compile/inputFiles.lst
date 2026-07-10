@@ -1,6 +1,8 @@
 /home/adriel/GestionRessourcesHumaines/gestion-ressources-humaines/src/main/java/com/axitech/dao/repository/ContratRepository.java
 /home/adriel/GestionRessourcesHumaines/gestion-ressources-humaines/src/main/java/com/axitech/App.java
 /home/adriel/GestionRessourcesHumaines/gestion-ressources-humaines/src/main/java/com/axitech/dao/entities/TypeConge.java
+/home/adriel/GestionRessourcesHumaines/gestion-ressources-humaines/src/main/java/com/axitech/controller/ListePersonnesServlet.java
+/home/adriel/GestionRessourcesHumaines/gestion-ressources-humaines/src/main/java/com/axitech/service/Personneservice.java
 /home/adriel/GestionRessourcesHumaines/gestion-ressources-humaines/src/main/java/com/axitech/dao/entities/Tache.java
 /home/adriel/GestionRessourcesHumaines/gestion-ressources-humaines/src/main/java/com/axitech/dao/entities/Paiement.java
 /home/adriel/GestionRessourcesHumaines/gestion-ressources-humaines/src/main/java/com/axitech/dao/entities/Mission.java
@@ -18,6 +20,7 @@
 /home/adriel/GestionRessourcesHumaines/gestion-ressources-humaines/src/main/java/com/axitech/dao/entities/Contrat.java
 /home/adriel/GestionRessourcesHumaines/gestion-ressources-humaines/src/main/java/com/axitech/dao/entities/BulletinPaie.java
 /home/adriel/GestionRessourcesHumaines/gestion-ressources-humaines/src/main/java/com/axitech/dao/repository/EmployeRepository.java
+/home/adriel/GestionRessourcesHumaines/gestion-ressources-humaines/src/main/java/com/axitech/controller/ThymeleafConfig.java
 /home/adriel/GestionRessourcesHumaines/gestion-ressources-humaines/src/main/java/com/axitech/dao/entities/Employe.java
 /home/adriel/GestionRessourcesHumaines/gestion-ressources-humaines/src/main/java/com/axitech/dao/repository/PdgRepository.java
 /home/adriel/GestionRessourcesHumaines/gestion-ressources-humaines/src/main/java/com/axitech/dao/repository/ComptableRepository.java

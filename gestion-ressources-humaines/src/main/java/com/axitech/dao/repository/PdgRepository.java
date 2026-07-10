@@ -18,11 +18,15 @@ public class PdgRepository {
 
     public PdgRepository(Connection connection) {
         this.connection = connection;
-        this.personneRepository = new PersonneRepository(connection);
+        try {
+            this.personneRepository = new PersonneRepository();
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException("Unable to initialize PersonneRepository", e);
+        }
     }
 
     public void save(Pdg pdg) {
-        int id = personneRepository.insererPersonne((com.axitech.dao.entities.Personne) pdg, "PDG");
+        int id = personneRepository.insererPersonne((com.axitech.dao.entities.Personne) pdg);
         if (id == -1) {
             System.out.println("Echec de l'insertion de la personne, PDG non cree.");
             return;
